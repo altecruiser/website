@@ -114,7 +114,7 @@
 
     .result h2 {
       font-size: clamp(30px, 4.5vw, 46px);
-      margin: 10px 0;
+      margin: 10x 0;
     }
 
     .fireworks {
@@ -169,6 +169,8 @@
     const noBtn = document.getElementById("noBtn");
     const result = document.getElementById("result");
     const hint = document.getElementById("hint");
+    const title = document.querySelector("h1");
+    const firstGIF = document.getElementById("firstGIF");
 
     /* ---------- CONFETTI ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
@@ -263,6 +265,10 @@
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
+        
+      title.style.display = "none";
+      firstGIF.style.display = "none";
+      
       zone.style.display = "none";
       hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
